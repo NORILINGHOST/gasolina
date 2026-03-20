@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Flex Economiza</title>
+<link rel="stylesheet" href="estaly.css">
+</head>
+
+<body>
+
+
+
+<!-- Header -->
+<div class="header">
+    <img src="Captura de tela 2026-03-19 210813.png" class="">
+    Autoflexeconomiza Brasil
+</div>
+ <div class="img">
+        <img src="BANNER principal.webp" alt="" class="img1">
+    </div>
+</div>
+
+<div class="section">
+  <h1>Seu Combustível Está Acabando com Seu Dinheiro?</h1>
+
+  <p>Economize até 50% na Bomba com Este Dispositivo Inteligente</p>
+
+  <div class="desc">
+    Reduza o consumo de gasolina e etanol sem perder potência. 
+    Tecnologia testada e aprovada por milhares de motoristas.
+  </div>
+
+  <a href="#" class="button">COMPRAR AGORA</a>
+</div>
+
+<div class="container1">
+<img src="Captura de tela 2026-03-19 210357.png" alt="">
+
+</div>
+
+
+<section class="problemas">
+  <div class="titulo-section">
+  <h2>Você Reconhece Alguma Dessas Situações?</h2>
+</div>
+  <div class="container">
+
+    <!-- BLOCO 1 -->
+    <div class="box">
+      <h2>Gasto Absurdo com Combustível</h2>
+      <p>Todo mês a conta do combustível pesa no bolso e parece que nunca melhora</p>
+    </div>
+
+    <!-- DUPLICA ESSES -->
+    <div class="box2">
+      <h2>Carro Bebendo Muito</h2>
+      <p>Você abastece e em poucos dias já precisa voltar no posto</p>
+    </div>
+
+    <div class="box3">
+      <h2>Preço Só Aumenta</h2>
+      <p>Gasolina e etanol sobem toda semana e ninguém aguenta mais</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="section1">
+  <h1>O Redutor de Gasolina Master Auto Flexx RESOLVE todos esses problemas!</h1>
+<p>Dispositivo inteligente que otimiza a queima do combustível, reduzindo o consumo em até 50% e aumentando a potência do motor.</p>
+
+</div>
+
+
+
+<div class="carrossel">
+
+<button class="seta esquerda" onclick="voltar()">❮</button>
+
+<div class="slides">
+<img src="pro1.webp" class="slide active">
+<img src="pro2.webp" class="slide">
+<img src="pro3.webp" class="slide">
+<img src="pro4.webp" class="slide">
+<img src="pro5.webp" class="slide">
+</div>
+
+<button class="seta direita" onclick="avancar()">❯</button>
+
+</div>
+
+
+<!-- simulador -->
+ <section style="padding:20px; background:linear-gradient(180deg,#020617,#0f172a); font-family:Arial; color:#fff;">
+
+  <div style="max-width:400px; margin:auto;">
+
+    <h2 style="text-align:center; font-size:22px; margin-bottom:10px;">
+      Simule Sua Economia 🚗💸
+    </h2>
+
+    <p style="text-align:center; font-size:14px; color:#94a3b8; margin-bottom:20px;">
+      Veja quanto você está perdendo em combustível
+    </p>
+
+    <!-- Inputs -->
+    <label style="font-size:13px;">Ano do carro</label>
+    <select id="ano" style="width:100%; padding:12px; margin-top:5px; margin-bottom:10px; border-radius:10px; border:none; background:#1e293b; color:#fff;">
+      <option>2024</option>
+      <option>2023</option>
+      <option>2022</option>
+      <option>2021</option>
+      <option>2020</option>
+      <option>1996 pra cima</option>
+    </select>
+
+    <label style="font-size:13px;">marca</label>
+    <select id="ano" style="width:100%; padding:12px; margin-top:5px; margin-bottom:10px; border-radius:10px; border:none; background:#1e293b; color:#fff;">
+      <option>Hyundai</option>
+      <option>Volkswagen</option>
+      <option>Chevrolet</option>
+      <option>Fiat</option>
+      <option>Renault</option>
+      <option>Toyota</option>
+       <option>Honda</option>
+        <option>outros</option>
+    </select>
+
+    <!-- <label style="font-size:13px;">Modelo</label>
+    <select id="modelo" style="width:100%; padding:12px; margin-top:5px; margin-bottom:10px; border-radius:10px; border:none; background:#1e293b; color:#fff;">
+      <option>Gol</option>
+      <option>Onix</option>
+      <option>HB20</option>
+      <option>Corolla</option>
+      <option>Celta</option>
+      <option>Corsa</option>
+      <option>Argo</option>
+      <option>Fox</option>
+      <option>Kwid</option>
+      <option>Polo</option>
+      <option>outros</option>
+    </select> -->
+
+    <label style="font-size:13px;">Quanto vai abastecer (R$)</label>
+    <input id="valor" type="number" placeholder="Ex: 100"
+      style="width:100%; padding:12px; margin-top:5px; border-radius:10px; border:none; background:#1e293b; color:#fff;">
+
+    <!-- Botão -->
+    <button onclick="simular()" 
+      style="width:100%; margin-top:15px; padding:14px; border:none; border-radius:12px; font-weight:bold; font-size:16px;
+      background:#33ad60; color:#ffffff; animation:pulse 1.5s infinite;">
+      CALCULAR ECONOMIA
+    </button>
+
+    <!-- Resultado -->
+    <div id="resultado" style="display:none; margin-top:20px; background:#020617; padding:15px; border-radius:12px; text-align:center;">
+      
+      <p style="font-size:14px;">Você abastece:</p>
+      <h3 id="litrosNormal" style="color:#fff;"></h3>
+
+      <p style="font-size:14px; margin-top:10px;">Com o dispositivo:</p>
+      <h3 id="litrosEconomia" style="color:#22c55e;"></h3>
+
+      <p style="margin-top:10px;">🔥 Ganho real:</p>
+      <h2 id="ganho" style="color:#22c55e;"></h2>
+
+      <p id="dinheiro" style="margin-top:10px; color:#facc15;"></p>
+
+      <!-- CTA -->
+      <button style="width:100%; margin-top:15px; padding:14px; border:none; border-radius:12px; font-weight:bold;
+      background:#ef4444; color:#fff;">
+        QUERO ECONOMIZAR AGORA
+      </button>
+
+    </div>
+
+  </div>
+</section>
+<script>
+function simular() {
+  let valor = parseFloat(document.getElementById("valor").value);
+  let preco = 6.30;
+  let economia = 0.37;
+
+  if (!valor || valor <= 0) {
+    alert("Digite um valor válido");
+    return;
+  }
+
+  let litros = valor / preco;
+  let litrosEco = litros * (1 + economia);
+  let ganho = litrosEco - litros;
+
+  let economiaReais = ganho * preco;
+
+  document.getElementById("litrosNormal").innerText = litros.toFixed(2) + " L";
+  document.getElementById("litrosEconomia").innerText = litrosEco.toFixed(2) + " L";
+  document.getElementById("ganho").innerText = "+" + ganho.toFixed(2) + " Litros";
+
+  document.getElementById("dinheiro").innerText =
+    "💰 Você está economizando R$ " + economiaReais.toFixed(2) + " por abastecimento";
+
+  document.getElementById("resultado").style.display = "block";
+}
+</script>
+
+<!-- simulador -->
+
+<section class="como-funciona">
+  <div class="container">
+
+    <h2>Como Funciona?</h2>
+    <p class="sub">Instalação simples em apenas 3 passos</p>
+
+    <div class="steps">
+
+      <!-- PASSO 1 -->
+      <div class="step">
+        <div class="number">1</div>
+        <h3>Abra o Capô</h3>
+        <span>Instalação Simples</span>
+        <p>Localize a mangueira de combustível do seu veículo</p>
+      </div>
+
+      <!-- PASSO 2 -->
+      <div class="step">
+        <div class="number">2</div>
+        <h3>Conecte o Dispositivo</h3>
+        <span>Conexão do dispositivo</span>
+        <p>Encaixe o redutor no engate rápido da mangueira</p>
+      </div>
+
+      <!-- PASSO 3 -->
+      <div class="step">
+        <div class="number">3</div>
+        <h3>Pronto! É Só Dirigir</h3>
+        <span>Pronto para usar</span>
+        <p>Comece a economizar imediatamente sem complicação</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="beneficios">
+  <div class="container">
+
+    <h2>Benefícios Que Você Vai Sentir No Primeiro Tanque</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">💸</div>
+        <h3>Economia Real de até 50%</h3>
+        <p>Reduza drasticamente os gastos com combustível todo mês</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Mais Potência no Motor</h3>
+        <p>Combustão mais eficiente = mais força e desempenho</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🛡️</div>
+        <h3>Protege o Motor</h3>
+        <p>Queima mais limpa reduz desgaste e aumenta vida útil</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🚗</div>
+        <h3>Funciona em Todos os Carros 12V</h3>
+        <p>Gasolina, etanol, flex. Qualquer veículo 12V</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⏱️</div>
+        <h3>Instalação em 5 Minutos</h3>
+        <p>Sem ferramentas, sem mecânico, sem complicação</p>
+      </div>
+
+      <div class="card destaque">
+        <div class="icon">✅</div>
+        <h3>Tecnologia Testada</h3>
+        <p>Milhares de motoristas já comprovaram a eficácia</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="depoimentos">
+  <div class="container">
+
+    <h2>Veja Quem Já Está Economizando</h2>
+    <p class="sub">Resultados reais de clientes que já testaram</p>
+
+    <div class="lista">
+
+      <!-- DEP 1 -->
+      <div class="dep">
+        <div class="top">
+          <img src="Captura de tela 2026-03-17 231616.png" class="cliente">
+          <div>
+            <h3>João Silva</h3>
+            <span>São Paulo - SP</span>
+          </div>
+        </div>
+
+        <p class="texto">
+          “Instalei em menos de 5 minutos e já senti diferença no consumo. Muito bom mesmo!”
+        </p>
+
+        <img src="depo1.1.webp" class="produto">
+      </div>
+
+      <!-- DEP 2 -->
+      <div class="dep">
+        <div class="top">
+          <img src="Captura de tela 2026-03-17 231959.png" class="cliente">
+          <div>
+            <h3>Carlos Mendes</h3>
+            <span>Curitiba - PR</span>
+          </div>
+        </div>
+
+        <p class="texto">
+          “No primeiro tanque já economizei bastante. Valeu muito a pena.”
+        </p>
+
+        <img src="carro3.webp" class="produto">
+      </div>
+
+      <!-- DEP 3 -->
+      <div class="dep">
+        <div class="top">
+          <img src="Captura de tela 2026-03-17 232203.png" class="cliente">
+          <div>
+            <h3>Marcos Lima</h3>
+            <span>Goiânia - GO</span>
+          </div>
+        </div>
+
+        <p class="texto">
+          “Achei que não funcionava, mas me surpreendeu demais. Recomendo!”
+        </p>
+
+        <img src="carro2.webp" class="produto">
+      </div>
+
+      <!-- DEP 4 -->
+      <div class="dep">
+        <div class="top">
+          <img src="Captura de tela 2026-03-17 232601.png" class="cliente">
+          <div>
+            <h3>Rafael Souza</h3>
+            <span>Belo Horizonte - MG</span>
+          </div>
+        </div>
+
+        <p class="texto">
+          “Meu carro ficou mais econômico e até mais forte. Produto top!”
+        </p>
+
+        <img src="carro1.webp" class="produto">
+      </div>
+
+      <!-- DEP 5 -->
+      
+
+    </div>
+
+  </div>
+</section>
+
+<div class="video-section">
+
+  <h2 class="headline">
+    ⚠️ Veja Como Motoristas Estão Economizando Até 50% no Combustível (Antes que Isso Saia do Ar)
+  </h2>
+
+  <div class="video-box">
+    <video 
+      src="prov.mp4"
+      controls
+      controlsList="nodownload nofullscreen noremoteplayback"
+      disablePictureInPicture
+    ></video>
+  </div>
+
+</div>
+
+
+<section class="compatibilidade">
+  <div class="container">
+
+    <h2>Compatibilidade: Funciona em TODOS os Carros</h2>
+    <p class="sub">Sistema 12V Universal</p>
+
+    <p class="desc">
+      Compatível com praticamente 100% dos veículos produzidos nos últimos 30 anos
+    </p>
+
+    <!-- TIPOS DE VEÍCULOS -->
+    <div class="grid">
+
+      <div class="card">
+        <h3>🚗 Carros Nacionais</h3>
+        <p>Fiat, Chevrolet, Ford, Volkswagen, Renault e outros</p>
+      </div>
+
+      <div class="card">
+        <h3>🌍 Carros Importados</h3>
+        <p>BMW, Mercedes, Honda, Toyota, Hyundai e marcas premium</p>
+      </div>
+
+      <div class="card">
+        <h3>🚐 Vans e Utilitários</h3>
+        <p>Sprinter, Kombi, Towner, Iveco, MAN e veículos comerciais</p>
+      </div>
+
+      <div class="card">
+        <h3>🏍️ Motocicletas 12V</h3>
+        <p>Motos com sistema elétrico 12V também são compatíveis</p>
+      </div>
+
+    </div>
+
+    <!-- COMPATÍVEL -->
+    <div class="check-section">
+      <h3>✔ Compatível Com:</h3>
+
+      <ul>
+        <li>Gasolina (comum e aditivada)</li>
+        <li>Etanol (Álcool)</li>
+        <li>Flex (Gasolina OU Etanol)</li>
+        <li>Diesel (modelos 12V)</li>
+        <li>Híbridos (com sistema 12V)</li>
+        <li>Carros com Turbo</li>
+      </ul>
+    </div>
+
+    <!-- NÃO COMPATÍVEL -->
+    <div class="no-check-section">
+      <h3>✗ NÃO Compatível Com:</h3>
+
+      <ul>
+        <li>Carros 24V</li>
+        <li>Veículos sem mangueira de combustível</li>
+        <li>GNV puro</li>
+        <li>Carros 100% elétricos</li>
+      </ul>
+    </div>
+
+    <!-- COMO SABER -->
+    <div class="como-saber">
+      <h3>Como Saber Se Seu Carro é Compatível?</h3>
+
+      <div class="passos">
+
+        <div class="passo">
+          <span>1</span>
+          <p>Verifique no manual se é sistema 12V</p>
+        </div>
+
+        <div class="passo">
+          <span>2</span>
+          <p>Abra o capô e veja a mangueira de combustível</p>
+        </div>
+
+        <div class="passo">
+          <span>3</span>
+          <p>Carros após 1994 são compatíveis</p>
+        </div>
+
+        <div class="passo destaque">
+          <span>4</span>
+          <p>Em dúvida? Fale conosco no WhatsApp</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<div class="checkout-container">
+
+  <div class="header1">
+    <div class="timer">Oferta expira em: <span id="timer">00:00</span></div>
+    <div class="title">Oferta Especial Por Tempo Limitado</div>
+  </div>
+
+  <div class="content">
+
+    <div class="price-box">
+      <img src="pro4-removebg-preview.png" alt="" class="imgg">
+      <div class="old-price">De R$ 359,00</div>
+      <div class="current-price-pix">
+        R$ <span>38,89</span>
+      </div>
+      <div class="pix-text">à vista no PIX com desconto exclusivo</div>
+      <div class="discount-badge">70% OFF</div>
+    </div>
+
+    <button class="btn-comprar">COMPRAR AGORA →</button>
+
+    <div class="frete">Frete Grátis para Todo o Brasil</div>
+
+    <div class="seguranca">
+      Pagamento 100% <strong>Seguro</strong>
+    </div>
+
+  </div>
+
+</div>
+<script>
+// =============================================
+// CONTADOR REGRESSIVO (exemplo: inicia com 5 minutos)
+// Altere os valores de minutos e segundos iniciais aqui
+// =============================================
+let minutosIniciais = 5;
+let segundosIniciais = 0;
+
+let tempoRestante = minutosIniciais * 60 + segundosIniciais;
+const timerElement = document.getElementById("timer");
+
+function atualizarTimer() {
+  if (tempoRestante <= 0) {
+    timerElement.textContent = "00:00";
+    timerElement.style.color = "#e63946"; // vermelho quando acabar
+    timerElement.style.fontWeight = "bold";
+    // Opcional: desabilitar botão ou mostrar mensagem
+    // document.querySelector(".btn-comprar").disabled = true;
+    return;
+  }
+
+  const minutos = Math.floor(tempoRestante / 60);
+  const segundos = tempoRestante % 60;
+
+  timerElement.textContent = 
+    String(minutos).padStart(2, '0') + ":" + 
+    String(segundos).padStart(2, '0');
+
+  tempoRestante--;
+}
+
+// Inicia o contador imediatamente e atualiza a cada segundo
+atualizarTimer();
+const intervalId = setInterval(atualizarTimer, 1000);
+
+// =============================================
+// EFEITO NO BOTÃO "COMPRAR AGORA"
+// (pulse + loading fake de 1,5s ao clicar)
+// =============================================
+const botaoComprar = document.querySelector(".btn-comprar");
+
+botaoComprar.addEventListener("click", function() {
+  // Desabilita botão temporariamente
+  this.disabled = true;
+  this.textContent = "Processando...";
+  this.style.background = "#009624"; // verde mais escuro
+  this.style.transform = "scale(0.98)";
+
+  // Simula processamento (você pode substituir por redirecionamento real)
+  setTimeout(() => {
+    // Aqui você coloca o que realmente acontece após o clique
+    // Exemplo: redirecionar para checkout, abrir WhatsApp, mostrar QR Code, etc.
+    alert("Redirecionando para pagamento via PIX..."); // placeholder
+
+    // Volta ao normal (caso queira permitir cliques múltiplos)
+    this.disabled = false;
+    this.textContent = "COMPRAR AGORA →";
+    this.style.background = "#00c853";
+    this.style.transform = "scale(1)";
+  }, 1500); // 1,5 segundos de "loading"
+});
+
+// Opcional: parar o timer quando a página for fechada/minimizada (economia de CPU)
+window.addEventListener("beforeunload", () => {
+  clearInterval(intervalId);
+});
+</script>
+
+
+<div class="garantia-section">
+  <div class="garantia-card">
+    <div class="garantia-icon">🛡️</div>
+    <h3>Garantia de Satisfação Total – 7 Dias</h3>
+    <p class="garantia-texto">
+      Comprou e não gostou? Sem problemas. Você tem <strong>7 dias corridos</strong> a contar do recebimento do produto para exercer seu <strong>direito de arrependimento</strong> (Art. 49 do Código de Defesa do Consumidor).
+    </p>
+    <ul class="garantia-lista">
+      <li> Sem precisar justificar o motivo</li>
+      <li> Devolvemos 100% do valor pago (incluindo frete)</li>
+      <li> Sem taxas ocultas ou burocracia</li>
+      <li> Reembolso rápido via mesmo meio de pagamento</li>
+    </ul>
+    <p class="garantia-footer">
+      Nossa prioridade é sua total satisfação. Se por qualquer razão o produto não atender às suas expectativas, é só nos avisar em até 7 dias que cuidamos de tudo para você.
+    </p>
+    <div class="selo-seguro">
+      <span>Compra 100% Segura com Proteção Legal</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="faq-section">
+  <h2 class="faq-title">Perguntas Frequentes</h2>
+  
+  <div class="faq-item">
+    <h3>O Redutor funciona em qualquer carro?</h3>
+    <p>Sim, o Redutor Master Auto Flexx é compatível com a grande maioria dos veículos a gasolina, etanol ou flex (carros, utilitários, picapes, motos e até geradores). Funciona em motores carburados e injetados (incluindo os mais modernos). Recomendamos verificar o modelo do seu veículo na descrição do produto ou entrar em contato com nosso suporte para confirmação 100%.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>É difícil instalar?</h3>
+    <p>Não! A instalação é simples e rápida, leva em média 10 a 20 minutos. É um processo plug-and-play que não exige ferramentas especiais nem conhecimento avançado de mecânica. Incluímos instruções ilustradas passo a passo e vídeo explicativo. Se preferir, indicamos instaladores parceiros em várias cidades.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Quanto tempo para receber?</h3>
+    <p>Enviamos em até 24 horas úteis após a confirmação do pagamento. O prazo de entrega varia conforme sua localização:
+    <ul>
+      <li>Regiões Sul e Sudeste: 3 a 7 dias úteis</li>
+      <li>Centro-Oeste e Nordeste: 5 a 10 dias úteis</li>
+      <li>Norte: 7 a 12 dias úteis</li>
+    </ul>
+    Frete grátis para todo o Brasil via Correios ou transportadora.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Quais formas de pagamento aceitam?</h3>
+    <p>Aceitamos:
+    <ul>
+      <li>PIX (desconto exclusivo à vista – processa na hora!)</li>
+      <li>Cartão de crédito (até 12x sem juros em algumas bandeiras)</li>
+      <li>Boleto bancário</li>
+    </ul>
+    Pagamento 100% seguro com certificados SSL e proteção antifraude.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>E se não funcionar no meu carro?</h3>
+    <p>Se após a instalação e uso correto o Redutor não apresentar os resultados esperados no seu veículo, você tem <strong>7 dias corridos</strong> para testar (direito de arrependimento – Art. 49 do CDC). Basta nos avisar que organizamos a devolução gratuita e devolvemos 100% do valor pago (incluindo frete). Sem burocracia e sem perguntas desnecessárias.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Posso confiar na Autoflex Economiza Brasil?</h3>
+    <p>Sim! Somos uma empresa especializada em soluções de economia de combustível há anos, com milhares de clientes satisfeitos em todo o Brasil. Trabalhamos com garantia legal de 7 dias, suporte via WhatsApp/telefone, envio rastreável e nota fiscal. Milhares de avaliações positivas em nossas redes e site oficial comprovam a seriedade. Sua compra é protegida por lei e pela nossa política de satisfação total.</p>
+  </div>
+</div>
+
+
+<footer class="footer-section">
+  <div class="footer-content">
+    <div class="logo-container">
+      <span class="fuel-icon">⛽</span>
+      <h2>autoflexeconomiza Brasil</h2>
+    </div>
+
+    <p class="descricao">
+      Tecnologia inteligente para economizar combustível e aumentar a performance do seu veículo.<br>
+      Economize até 50% na bomba!
+    </p>
+
+    <div class="buttons">
+      <a href="https://wa.me/55SEUNUMERO?text=Olá,%20tenho%20dúvidas%20sobre%20o%20Redutor" 
+         class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+        <span class="icon">💬</span> Tirar Dúvidas no WhatsApp
+      </a>
+
+      <a href="#reclamacao" class="btn btn-reclamacao">
+        <span class="icon">!</span> Fazer uma Reclamação
+      </a>
+    </div>
+
+    <div class="copyright">
+      © 2026 autoflexeconomiza Brasil. Todos os direitos reservados.<br>
+      CNPJ: 31.445.595/0001-12
+    </div>
+  </div>
+</footer>
+
+<script>
+
+let index = 0;
+let slides = document.querySelectorAll(".slide");
+
+function mostrarSlide(){
+slides.forEach(slide => slide.classList.remove("active"));
+slides[index].classList.add("active");
+}
+
+function avancar(){
+index++;
+if(index >= slides.length){
+index = 0;
+}
+mostrarSlide();
+}
+
+function voltar(){
+index--;
+if(index < 0){
+index = slides.length - 1;
+}
+mostrarSlide();
+}
+
+</script>
+
+</div>
+</body>
+</html>
